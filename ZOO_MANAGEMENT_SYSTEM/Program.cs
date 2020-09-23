@@ -49,6 +49,7 @@ namespace ZOO_MANAGEMENT_SYSTEM
                                 Console.WriteLine("3. Cat");
                                 int animal = int.Parse(Console.ReadLine());
                                 Animal animal1;
+                                Console.WriteLine("You select {0}",animal);
                                 Console.WriteLine("Enter name of animal: ");
                                 string name = Console.ReadLine();
                                 Console.WriteLine("Enter age of animal: ");
@@ -58,15 +59,19 @@ namespace ZOO_MANAGEMENT_SYSTEM
                                 switch (animal)
                                 {
                                     case 1:
+                                        Console.WriteLine("You just have entered information for the Tiger.");
                                        animal1 = new Tiger(name,age,des);
                                         break;
                                     case 2:
+                                        Console.WriteLine("You just have entered information for the Dog.");
                                         animal1 = new Dog(name, age, des);
                                         break;
                                     case 3:
+                                        Console.WriteLine("You just have entered information for the Cat.");
                                         animal1 = new Cat(name, age, des);
                                         break;
                                     default:
+                                        Console.WriteLine("You just have entered information for the Tiger.");
                                         animal1 = new Tiger(name, age, des);
                                         break;
                                 }
@@ -91,7 +96,7 @@ namespace ZOO_MANAGEMENT_SYSTEM
                     case 5:
                         foreach (Cage c in zoo.CageList)
                         {
-                            Console.WriteLine("List of animal:  {0}", c.CageNumber);
+                            Console.WriteLine("List of animal in Cage List:  {0}", c.CageNumber);
                             foreach (Animal animal in c.AnimalList)
                             {                          
                                 animal.ViewInfo();
