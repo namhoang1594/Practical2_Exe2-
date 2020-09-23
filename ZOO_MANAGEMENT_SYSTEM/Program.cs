@@ -30,11 +30,14 @@ namespace ZOO_MANAGEMENT_SYSTEM
                             cage.CageNum();
                             zoo.AddCage(cage);
                         }
+                        Console.WriteLine("You have {0} in Cage List",n);
                         break;
                     case 2:
                         Console.WriteLine("Enter the Cage want to remove: ");
                         int rmc = int.Parse(Console.ReadLine());
                         zoo.RemoveCage(rmc);
+                        Console.WriteLine("Removed successfully");
+                        Console.WriteLine("Now you only have {0} in Cage List", rmc);
                         break;
                     case 3:
                         for (int i = 0; i < zoo.CageList.Count; i++)
